@@ -1,0 +1,57 @@
+services:
+  db:
+    image: postgres:15
+    container_name: social_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init_db.sh:/docker-entrypoint-initdb.d/init_db.sh
+    ports:
+      - "5432:5432"
+
+#  proxy:
+#    build: ./social-proxy
+#    depends_on:
+#      - init_db
+
+  backend:
+    build: ./
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_NAME: ${DB_NAME}
+      DB_URL: postgres://${DB_USER}:${DB_PASS}@db:5432/${DB_NAME}?sslmode=disable
+    ports:
+      - "8081:8081"
+    command: ["bash", "./scripts/init_db.sh" ]
+
+#  backend-chat:
+#    build: ./social-backend-chat
+#    depends_on:
+#      - openapi
+#    environment:
+#      DB_HOST: db
+#      DB_USER: ${DB_USER}
+#      DB_PASS: ${DB_PASS}
+#      DB_NAME: ${DB_NAME}
+#    ports:
+#      - "8082:8082"
+
+  frontend:
+    build: ../social-frontend
+    depends_on:
+      - backend
+    environment:
+      BACKEND_PROXY: http://backend:8080
+    ports:
+      - "5173:5173"
+
+volumes:
+  pgdata:

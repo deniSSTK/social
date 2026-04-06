@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--black);
+    font-size: var(--font-md);
+    overflow-x: hidden;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100svw;
+    height: 100dvh;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: var(--font-xl) !important;
+    font-weight: normal;
+}
+
+span {
+    font-size: var(--font-md);
+}
+
+svg {
+    height: 25px;
+    width: 25px;
+}
+
+button {
+    cursor: pointer;
+}

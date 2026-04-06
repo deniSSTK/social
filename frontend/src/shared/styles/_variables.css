@@ -1,0 +1,46 @@
+:root {
+    --red-n: 245, 118, 118;
+    --black-n: 0, 0, 0;
+    --white-n: 255, 255, 255;
+    --yellow-n: 220, 220, 140;
+
+    --red: rgb(var(--red-n));
+    --green: #7ab67a;
+    --white: rgb(var(--white-n));
+    --black: rgb(var(--black-n));
+    --yellow: rgb(var(--yellow-n));
+
+    --primary-n: 118, 74, 249;
+    --primary: rgb(var(--primary-n));
+    --primary-hover: color-mix(in srgb, rgb(var(--primary-n)) 90%, var(--black));
+
+    --grey-light: #f2f2f5;
+    --grey-light-hover: color-mix(in srgb, var(--grey-light) 90%, var(--black));
+    --grey: #bbbbc5;
+    --grey-dark: #a7a7b0;
+
+    --border-grey: 1px solid var(--grey);
+
+    --gap-sm: 6px;
+    --gap-md: 18px;
+    --gap-xl: 50px;
+
+    --border-sm: 4px;
+    --border-md: calc(var(--border-sm) * 2);
+    --border-xl: calc(var(--border-sm) * 3);
+
+    --padding-component-sm: 6px 12px;
+    --padding-component-md: 12px;
+    --padding-component-xl: 24px 42px;
+
+    --padding-sm: 6px;
+    --padding-md: 18px;
+    --padding-xl: 24px;
+
+    --font-sm: 12px;
+    --font-md: 16px;
+    --font-xl: 30px;
+
+    --opacity-inactive: .5;
+    --tr-duration: 0.2s;
+}

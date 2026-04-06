@@ -1,0 +1,11 @@
+.fancy--font {
+    font-family: "Bonheur Royale", cursive;
+}
+
+.primary--font {
+    color: var(--primary);
+}
+
+.text-center {
+    text-align: center;
+}

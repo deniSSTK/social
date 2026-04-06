@@ -1,0 +1,43 @@
+.checkbox {
+    &__label {
+
+    }
+
+    &__input {
+        width: 40px;
+        height: max-content;
+
+        border-radius: calc(var(--border-xl) * 2);
+
+        display: flex;
+        align-items: center;
+        outline: none;
+        border: none;
+        position: relative;
+
+        background-color: var(--grey-light);
+
+        padding: 3px;
+
+        transition: background-color var(--tr-duration);
+
+        &.active {
+
+            background-color: var(--green);
+
+            .ball {
+                transform: translateX(100%);
+            }
+        }
+
+        .ball {
+            width: 50%;
+            aspect-ratio: 1;
+
+            border-radius: inherit;
+
+            background-color: var(--white);
+            transition: transform var(--tr-duration);
+        }
+    }
+}

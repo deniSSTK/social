@@ -1,0 +1,11 @@
+.main--layout {
+    width: 100%;
+
+    display: flex;
+}
+
+@media (max-width: 1200px) {
+    .main--layout {
+        padding-bottom: calc(50px + var(--padding-md));
+    }
+}
