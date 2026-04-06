@@ -1,5 +1,13 @@
 # Social Monorepo
 
+> [!WARNING]
+> This monorepo replaces the previously separate repositories:
+> `social-backend`: https://github.com/deniSSTK/social-backend
+> `social-frontend`: https://github.com/deniSSTK/social-frontend
+
+> [!NOTE]
+> The demo is currently down because the backend is not deployed.
+
 <p align="left">
   <img alt="Go" src="https://img.shields.io/badge/Go-1.24-00ADD8?logo=go&logoColor=white" />
   <img alt="Vue" src="https://img.shields.io/badge/Vue-3-42B883?logo=vue.js&logoColor=white" />
@@ -100,13 +108,3 @@ At runtime:
    ```
 
 By default, the frontend uses `/api` and the Vite dev server proxies that traffic to `http://localhost:8080`.
-
-## Notes
-
-> [!WARNING]
-> This monorepo replaces the previously separate repositories:
-> `social-backend`: https://github.com/deniSSTK/social-backend
-> `social-frontend`: https://github.com/deniSSTK/social-frontend
-
-> [!NOTE]
-> The demo is currently down because the backend is not deployed.
